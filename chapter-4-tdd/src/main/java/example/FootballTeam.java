@@ -1,3 +1,5 @@
+package example;
+
 public class FootballTeam implements Comparable<FootballTeam> {
     private int gamesWon;
 

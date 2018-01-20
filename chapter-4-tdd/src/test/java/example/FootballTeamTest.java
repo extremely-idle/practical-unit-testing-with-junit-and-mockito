@@ -1,5 +1,8 @@
+package example;
+
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -24,7 +27,7 @@ public class FootballTeamTest {
     @Test
     public void should_SetGamesWon_When_ConstructorCalledWithValidGamesWon() {
         FootballTeam team = new FootballTeam(GAMES_WON);
-        assertEquals("3 games passed to constructor, but " + team.getGamesWon() + " were returned", GAMES_WON, team
+        Assert.assertEquals("3 games passed to constructor, but " + team.getGamesWon() + " were returned", GAMES_WON, team
                 .getGamesWon());
     }
 
@@ -32,7 +35,7 @@ public class FootballTeamTest {
     @Parameters(method = "numberOfGamesWon")
     public void should_SetGamesWon_When_ConstructorCalledWithValidGamesWon(int gamesWon) {
         FootballTeam team = new FootballTeam(gamesWon);
-        assertEquals(gamesWon + " games passed to constructor, but " + team.getGamesWon() + " were returned",
+        Assert.assertEquals(gamesWon + " games passed to constructor, but " + team.getGamesWon() + " were returned",
                 gamesWon, team.getGamesWon());
     }
 
@@ -46,7 +49,7 @@ public class FootballTeamTest {
     public void should_BeInstanceOfComparable() {
         FootballTeam team = new FootballTeam(ANY_NUMBER);
 
-        assertTrue(team instanceof Comparable, "FootballTeam should implement Comparable");
+        assertTrue(team instanceof Comparable, "example.FootballTeam should implement Comparable");
     }
 
     @Test
