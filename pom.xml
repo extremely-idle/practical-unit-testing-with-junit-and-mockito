@@ -12,6 +12,7 @@
     <modules>
         <module>chapter-3-tests-with-no-collaborators</module>
         <module>chapter-4-tdd</module>
+        <module>chapter-5-mocks-stubs-spies</module>
     </modules>
 
     <dependencies>
